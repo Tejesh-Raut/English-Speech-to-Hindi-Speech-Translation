@@ -3,7 +3,7 @@ echo "Speak in English"
 rec -c 1 -r 16000 -b 16 Audio_English/original/t3.wav > Log/rec.txt
 echo "Audio recorded"
 echo "Amplifying audio . . . "
-sox -v 256.0 Audio_English/original/t3.wav Audio_English/amplified/t3.wav > Log/amplify.txt
+sox -v 1.0 Audio_English/original/t3.wav Audio_English/amplified/t3.wav > Log/amplify.txt
 echo "Taking sample noise from first 0.5 seconds . . ."
 sox Audio_English/amplified/t3.wav Audio_English/noise/t3.wav trim 0 0.5 > Log/noise.txt
 echo "Creating noise profile . . . "
